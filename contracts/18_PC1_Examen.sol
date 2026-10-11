@@ -22,7 +22,6 @@ contract UPAO244677 {
         direccion = msg.sender;
     }
 
-    // Parte 3a: no permite ids impares
     function agregarElemento(
         uint256 _id,
         string memory _nombre,
@@ -33,12 +32,10 @@ contract UPAO244677 {
         estudiantes.push(Estudiante(_id, _nombre, _edad, _carrera));
     }
 
-    // Parte 3b
     function contarElementos() public view returns (uint256) {
         return estudiantes.length;
     }
 
-    // Parte 3d
     function cambiarDireccion(address _nueva) public {
         direccion = _nueva;
     }
